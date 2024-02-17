@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutMeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,14 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/aboutme', function () {
-    return view('welcome');
-});
+Route::get('/aboutme', [AboutMeController::class, 'index']);
 
 Route::get('/skill', function () {
-    return view('welcome');
+    return view('skills');
 });
 
 Route::get('/hobbies', function () {
-    return view('welcome');
+    return view('hobbies');
 });
