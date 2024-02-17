@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AboutMeController;
+use App\Http\Controllers\HobbiesController;
+use App\Http\Controllers\SkillsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,10 +22,6 @@ Route::get('/', function () {
 
 Route::get('/aboutme', [AboutMeController::class, 'index']);
 
-Route::get('/skill', function () {
-    return view('skills');
-});
+Route::get('/skills', [SkillsController::class, 'index']);
 
-Route::get('/hobbies', function () {
-    return view('hobbies');
-});
+Route::get('/hobbies', [HobbiesController::class, 'index']);
